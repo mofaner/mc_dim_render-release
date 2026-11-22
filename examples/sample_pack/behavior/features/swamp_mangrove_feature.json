@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": { "identifier": "twilight:swamp_mangrove_feature" },
+    "mangrove_trunk": {
+      "trunk_block": "minecraft:mangrove_log",
+      "base_height": 6,
+      "height_rand_a": 2
+    },
+    "mangrove_canopy": {
+      "canopy_radius": 3,
+      "leaf_block": "minecraft:mangrove_leaves"
+    }
+  }
+}

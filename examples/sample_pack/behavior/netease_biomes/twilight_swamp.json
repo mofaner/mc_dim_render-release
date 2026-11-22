@@ -1,0 +1,18 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:biome": {
+    "description": { "identifier": "twilight:swamp" },
+    "components": {
+      "minecraft:climate": { "temperature": 0.8, "downfall": 0.9 },
+      "minecraft:overworld_height": { "noise_type": "swamp" },
+      "minecraft:surface_parameters": {
+        "sea_floor_depth": 7,
+        "sea_floor_material": "minecraft:clay",
+        "foundation_material": "minecraft:stone",
+        "mid_material": "minecraft:mud",
+        "top_material": "minecraft:mud",
+        "sea_material": "minecraft:water"
+      }
+    }
+  }
+}

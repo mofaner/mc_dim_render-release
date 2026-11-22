@@ -1,0 +1,16 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": { "identifier": "twilight:blossom_tree_feature" },
+    "cherry_trunk": {
+      "trunk_block": "minecraft:cherry_log",
+      "base_height": 6,
+      "height_rand_a": 2
+    },
+    "cherry_canopy": {
+      "radius": 3,
+      "height": 4,
+      "leaf_block": "minecraft:cherry_leaves"
+    }
+  }
+}

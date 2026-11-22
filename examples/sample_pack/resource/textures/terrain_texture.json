@@ -1,0 +1,16 @@
+{
+  "resource_pack_name": "twilight_res",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "twilight_glow_moss_top": {
+      "textures": "textures/blocks/twilight_glow_moss"
+    },
+    "twilight_rune_brick": {
+      "textures": [
+        "textures/blocks/twilight_rune_brick"
+      ]
+    }
+  }
+}

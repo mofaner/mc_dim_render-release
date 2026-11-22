@@ -1,0 +1,18 @@
+{
+  "format_version": "1.14.0",
+  "minecraft:biome": {
+    "description": { "identifier": "twilight:peaks" },
+    "components": {
+      "minecraft:climate": { "temperature": -0.3, "downfall": 0.8 },
+      "minecraft:overworld_height": { "noise_type": "mountains" },
+      "minecraft:surface_parameters": {
+        "sea_floor_depth": 5,
+        "sea_floor_material": "minecraft:stone",
+        "foundation_material": "minecraft:stone",
+        "mid_material": "minecraft:stone",
+        "top_material": "minecraft:snow",
+        "sea_material": "minecraft:water"
+      }
+    }
+  }
+}

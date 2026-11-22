@@ -1,0 +1,21 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "twilight:swamp_lily_rule",
+      "places_feature": "twilight:waterlily_feature"
+    },
+    "conditions": {
+      "placement_pass": "after_surface_pass",
+      "minecraft:biome_filter": [
+        { "test": "is_biome", "operator": "==", "value": "twilight:swamp" }
+      ]
+    },
+    "distribution": {
+      "iterations": 5,
+      "x": { "distribution": "uniform", "extent": [0, 16] },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": { "distribution": "uniform", "extent": [0, 16] }
+    }
+  }
+}

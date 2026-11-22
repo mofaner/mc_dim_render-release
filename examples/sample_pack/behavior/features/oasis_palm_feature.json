@@ -1,0 +1,15 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:tree_feature": {
+    "description": { "identifier": "twilight:oasis_palm_feature" },
+    "acacia_trunk": {
+      "trunk_block": "minecraft:jungle_log",
+      "base_height": 6,
+      "height_rand_a": 2
+    },
+    "acacia_canopy": {
+      "canopy_radius": 3,
+      "leaf_block": "minecraft:azalea_leaves_flowered"
+    }
+  }
+}

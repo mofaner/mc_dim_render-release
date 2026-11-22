@@ -1,0 +1,18 @@
+{
+  "format_version": "1.14.0",
+  "netease:large_feature_pool": {
+    "description": {
+      "identifier": "twilight:citadel_wing_pool"
+    },
+    "end_pool": "minecraft:empty",
+    "pool": [
+      {
+        "weight": 1,
+        "element": {
+          "structure_name": "twilight:citadel_wing",
+          "match_terrain": true
+        }
+      }
+    ]
+  }
+}

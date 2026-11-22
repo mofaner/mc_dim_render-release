@@ -1,0 +1,21 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "twilight:oasis_palm_rule",
+      "places_feature": "twilight:oasis_palm_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        { "test": "is_biome", "operator": "==", "value": "twilight:oasis" }
+      ]
+    },
+    "distribution": {
+      "iterations": 4,
+      "x": { "distribution": "uniform", "extent": [0, 16] },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": { "distribution": "uniform", "extent": [0, 16] }
+    }
+  }
+}

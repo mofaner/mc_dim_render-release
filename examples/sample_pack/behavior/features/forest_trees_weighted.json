@@ -1,0 +1,10 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:weighted_random_feature": {
+    "description": { "identifier": "twilight:forest_trees_weighted" },
+    "features": [
+      ["twilight:canopy_tree_feature", 5],
+      ["twilight:blossom_tree_feature", 2]
+    ]
+  }
+}

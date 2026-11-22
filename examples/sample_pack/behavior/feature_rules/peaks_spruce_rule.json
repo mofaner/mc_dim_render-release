@@ -1,0 +1,21 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:feature_rules": {
+    "description": {
+      "identifier": "twilight:peaks_spruce_rule",
+      "places_feature": "twilight:alpine_spruce_feature"
+    },
+    "conditions": {
+      "placement_pass": "surface_pass",
+      "minecraft:biome_filter": [
+        { "test": "is_biome", "operator": "==", "value": "twilight:peaks" }
+      ]
+    },
+    "distribution": {
+      "iterations": 2,
+      "x": { "distribution": "uniform", "extent": [0, 16] },
+      "y": "query.heightmap(variable.worldx, variable.worldz)",
+      "z": { "distribution": "uniform", "extent": [0, 16] }
+    }
+  }
+}

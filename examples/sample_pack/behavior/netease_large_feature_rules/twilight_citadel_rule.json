@@ -1,0 +1,16 @@
+{
+  "format_version": "1.14.0",
+  "netease:large_feature_rules": {
+    "description": {
+      "identifier": "twilight:citadel",
+      "place_pool": "twilight:citadel_center_pool"
+    },
+    "allowed_biomes": [
+      "twilight:plains",
+      "twilight:forest"
+    ],
+    "town_spacing": 14,
+    "min_town_separation": 4,
+    "max_depth": 2
+  }
+}

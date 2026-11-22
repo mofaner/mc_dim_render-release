@@ -1,0 +1,60 @@
+{
+  "format_version": "1.14.0",
+  "netease:dimension_info": {
+    "components": {
+      "netease:dimension_type": "minecraft:overworld",
+      "netease:generator_noise": {},
+      "netease:spawn_biomes": [
+        "twilight:plains",
+        "twilight:forest"
+      ],
+      "netease:biome_source": [
+        {
+          "type": "random_with_weight",
+          "pool": [
+            { "biome_type": "twilight:plains", "weight": 4 },
+            { "biome_type": "twilight:forest", "weight": 4 },
+            { "biome_type": "twilight:ocean",  "weight": 2 },
+            { "biome_type": "twilight:peaks",  "weight": 2 }
+          ]
+        },
+        {
+          "type": "gen_key_biomes",
+          "len_x": 6,
+          "len_z": 6,
+          "border_x": 1,
+          "border_z": 1,
+          "pool": [
+            { "biome_type": "twilight:peaks", "weight": 2 },
+            { "biome_type": "twilight:oasis", "weight": 1 }
+          ]
+        },
+        {
+          "type": "associated",
+          "core_biome": "twilight:oasis",
+          "associated_biomes": [
+            { "biome_type": "twilight:swamp", "relative_pos": [1, 0] },
+            { "biome_type": "twilight:swamp", "relative_pos": [-1, 0] }
+          ]
+        },
+        { "type": "vanilla_zoom_2x" },
+        { "type": "vanilla_zoom_2x" },
+        {
+          "type": "transition",
+          "biome_a": "twilight:plains",
+          "biome_b": "twilight:ocean",
+          "biome_transition": "twilight:swamp"
+        },
+        { "type": "fixed_zoom_2x" },
+        { "type": "fuzzy_zoom_2x" },
+        { "type": "vanilla_zoom_2x" },
+        { "type": "vanilla_zoom_2x" },
+        { "type": "vanilla_zoom_2x" }
+      ],
+      "netease:ban_vanilla_feature": {},
+      "netease:ban_vanilla_structure": {
+        "allowlist": ["netease_large_feature"]
+      }
+    }
+  }
+}
