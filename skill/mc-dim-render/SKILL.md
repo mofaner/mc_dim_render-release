@@ -7,7 +7,7 @@ description: 使用 mc_dim_render CLI 离线校验、定位（locate）、单点
 
 - 首次使用或不确定参数时，先运行 `mc_dim_render help` 读取完整子命令、参数选项、退出码与 JSON 返回结构（若未加入 `PATH`，依次检查 `$env:MC_DIM_RENDER_EXE` 或当前仓库 `build/mc_dim_render.exe`）。
 - AI 自测迭代一律保持无头静默（不加 `--gui`）；仅当用户明确要求打开预览窗口时再启动 `gui`。
-- 验证顺序：修改配置后先 `validate`（退出码恒为 `0`，以返回 JSON 的 `.valid` 布尔值为准），再用 `locate-biome` / `locate-structure` / `probe` / `render` 验证并导出 PNG，且**必须用看图工具实际查看导出的 PNG** 确认地形、群系过渡、贴图取色与结构落位。
+- 验证顺序：修改配置后先 `validate`（退出码恒为 `0`，以返回 JSON 的 `.valid` 布尔值与 `structure_density` 统计为准），再用 `locate-biome` / `locate-structure`（支持 `--count <N>` 批量列出多处实例以排查结构扎堆或过稀） / `probe` / `render` 验证并导出 PNG，且**必须用看图工具实际查看导出的 PNG** 确认地形、群系过渡、贴图取色与结构落位。
 - 收尾必须清理验证过程中生成的临时 `.png` 与 `.json` 报告，只保留模组正式文件。
 - 网易 `3.10` 自定义维度关键避坑：
   - 维度配置同时支持**完整写法**（`dimension_config.json` + `dm<维度ID>.json` 显式声明 `netease:biome_source`）与**省略写法**（仅写 `dimension_config.json` 的 `modDimensionId`，自动沿用主世界群系管线并按后缀映射 `dm<维度ID>_<原版群系>`）。
