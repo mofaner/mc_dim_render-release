@@ -33,7 +33,7 @@
 ## 安装与配置
 
 ### 1. 下载程序
-前往本仓库右侧 **[Releases](../../releases)** 下载最新压缩包（如 `mc_dim_render-v3.3.0-win64.zip`），解压到本地任意目录（例如 `D:\tools\mc_dim_render`）。压缩包内包含：
+前往本仓库右侧 **[Releases](../../releases)** 下载最新压缩包（如 `mc_dim_render-v3.4.0-win64.zip`），解压到本地任意目录（例如 `D:\tools\mc_dim_render`）。压缩包内包含：
 - `mc_dim_render.exe`：主程序（零外部运行库依赖，开箱即用）
 - `run_gui.bat`：一键启动示例包 GUI 预览
 - `skill/mc-dim-render/`：配套 AI Agent Skill
