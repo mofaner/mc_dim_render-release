@@ -12,9 +12,9 @@
 
 ## 功能概览
 
-- **全维度类型支持**：离线生成并渲染网易自定义维度与原版内置维度（原版多噪声主世界 `overworld`、自定义 2D 主世界、下界 `nether`、末地 `the_end`、超平坦 `generator_flat`），高度与水陆分布精确对齐 `3.10`（`1.21.130`）客户端。
+- **全维度类型支持**：离线生成并渲染网易自定义维度与原版内置维度（原版多噪声主世界 `overworld`、自定义 2D 主世界、下界 `nether`、末地 `the_end`、超平坦 `generator_flat`），高度、`NoiseBasedAquifer` 含水层/水下洞穴封顶与 3D `VoronoiZoom` 群系边界精确对齐 `3.10`（`1.21.130`）客户端。
 - **完整群系与地表系统**：同时支持**完整写法（带 `dm<维度ID>.json` 显式配置 `netease:biome_source`）**与**省略写法（仅配置 `dimension_config.json`，自动沿用主世界群系分布并映射 `dm<维度ID>_<原版群系>`）**；支持 `minecraft:overworld_height` 高度预设、`netease:overworld_surface` 自定义高度/真虚空构建、恶地 64 层陶瓦色带及 `surface_material_adjustments`。
-- **支持地物与拼图结构**：离线解析并装饰行为包 `features` / `feature_rules`、`.mcstructure` 三维旋转投影、**网易大型拼图结构（`netease_large_feature_rules` / `netease_large_feature_pools`）** 以及原版地表结构网格。
+- **支持地物与双体系拼图结构**：离线解析并装饰行为包 `features` / `feature_rules`、`.mcstructure` 三维旋转投影、**基岩版 `1.21+` 数据驱动拼图结构（`worldgen/structure_sets` + `structures` + `template_pools`）**、**网易大型拼图结构（`netease_large_feature_rules` / `netease_large_feature_pools`）** 以及原版 8 大主世界结构定位。
 - **资源包贴图自动取色**：自动发现同级资源包（`blocks.json`、`terrain_texture.json`、`.png`/`.tga`），提取自定义方块顶面真实颜色。
 - **面向 AI Agent 的无头 CLI**：全部子命令支持静默输出纯 JSON，可直接接入 AI Skill 完成“修改 → 校验 → 定位 → 渲染看图 → 修正”自动化闭环。
 - **原生中文 GUI 调试器**：支持鼠标拖拽 / `WASD` 平移、滚轮缩放、四分屏对比、等高线/区块网格、地物显隐、`F5` 热重载以及右键一键复制 `/tp @s X Y Z`。
@@ -33,7 +33,7 @@
 ## 安装与配置
 
 ### 1. 下载程序
-前往本仓库右侧 **[Releases](../../releases)** 下载最新压缩包（如 `mc_dim_render-v3.1.0-win64.zip`），解压到本地任意目录（例如 `D:\tools\mc_dim_render`）。压缩包内包含：
+前往本仓库右侧 **[Releases](../../releases)** 下载最新压缩包（如 `mc_dim_render-v3.2.0-win64.zip`），解压到本地任意目录（例如 `D:\tools\mc_dim_render`）。压缩包内包含：
 - `mc_dim_render.exe`：主程序（零外部运行库依赖，开箱即用）
 - `run_gui.bat`：一键启动示例包 GUI 预览
 - `skill/mc-dim-render/`：配套 AI Agent Skill

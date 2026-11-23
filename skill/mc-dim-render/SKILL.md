@@ -13,4 +13,4 @@ description: 使用 mc_dim_render CLI 离线校验、定位（locate）、单点
   - 维度配置同时支持**完整写法**（`dimension_config.json` + `dm<维度ID>.json` 显式声明 `netease:biome_source`）与**省略写法**（仅写 `dimension_config.json` 的 `modDimensionId`，自动沿用主世界群系管线并按后缀映射 `dm<维度ID>_<原版群系>`）。
   - 不带命名空间的 `dm<维度ID>_<后缀>` 群系，`<后缀>` 必须为合法原版群系名；全新群系请加自定义命名空间。
   - `netease:biome_source` 推荐串联 `6~8` 个 `*_zoom_2x` 控制斑块大小；真虚空群系在主世界类型自定义维度中通过 `"netease:overworld_surface"` 配置 `fill` (`min_height: 0, max_height: 255, fill_block: "minecraft:air"`，注意 `max_height < 256` 且左闭右开)；启用 `surface_material_adjustments` 时群系 JSON 需使用 `"minecraft:surface_builder"`。
-  - `netease_large_feature_rules` 的 `"place_pool"` 须写在 `"description"` 内，`allowed_biomes` 按群系 **tag** 匹配；维度禁用原版结构须用 `{"allowlist": ["netease_large_feature"]}`（不可用 `{"ban_all": true}`），且 `.mcstructure` 必须包含 `TAG_List("entities")`。
+  - 支持两套拼图结构体系：基岩版 `1.21+` 数据驱动 `worldgen/structure_sets` + `worldgen/structures` + `worldgen/template_pools`，以及网易 `netease_large_feature_rules`（其 `"place_pool"` 须写在 `"description"` 内，`allowed_biomes` 按群系 **tag** 匹配；维度禁用原版结构须用 `{"allowlist": ["netease_large_feature"]}` 而不可用 `{"ban_all": true}`）；所有 `.mcstructure` 必须包含 `TAG_List("entities")`。
